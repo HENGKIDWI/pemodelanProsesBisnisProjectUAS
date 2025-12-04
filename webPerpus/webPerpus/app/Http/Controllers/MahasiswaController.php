@@ -96,6 +96,6 @@ class MahasiswaController extends Controller
         $pdf = Pdf::loadView('surat.bebas-lab', ['user' => $user]);
 
         // Download file bernama 'Surat_Bebas_Lab_NIM.pdf'
-        return $pdf->download('Surat_Bebas_Lab_' . $user->nim . '.pdf');
+        return $pdf->download('Surat_Bebas_Tanggungan_Perpus_' . $user->nim . '.pdf');
     }
 }
