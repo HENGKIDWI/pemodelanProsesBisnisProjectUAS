@@ -175,7 +175,7 @@
                         </div>
                     @else
                         <div class="text-center py-8 text-gray-400 border-2 border-dashed rounded-lg">
-                            <p>Tidak ada riwayat tanggungan alat.</p>
+                            <p>Tidak ada riwayat tanggungan</p>
                         </div>
                     @endif
                 </div>

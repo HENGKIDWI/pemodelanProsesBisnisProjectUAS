@@ -49,7 +49,7 @@ class TanggunganResource extends Resource
                     ->label('Judul Buku'),
 
                 // Input 3: Nominal Denda (Auto-calculated from late days)
-                TextInput::make('nominal_denda')
+                TextInput::make('tanggungan')
                     ->label('Nominal Denda (Rp 5.000/hari terlambat)')
                     ->disabled() // Readonly, dihitung otomatis
                     ->dehydrated(false),
@@ -86,7 +86,7 @@ class TanggunganResource extends Resource
                 TextColumn::make('durasi_peminjaman')->label('Durasi (hari)'),
                 TextColumn::make('hari_keterlambatan')->label('Hari Terlambat')
                     ->formatStateUsing(fn ($state) => $state > 0 ? "$state hari" : '-'),
-                TextColumn::make('nominal_denda')->money('IDR')->label('Denda (Rp 5.000/hari)'),
+                TextColumn::make('tanggungan')->money('IDR')->label('Denda (Rp 5.000/hari)'),
                 
                 // Kolom Bukti Pembayaran (Bisa diklik)
                 ImageColumn::make('bukti_pembayaran')
